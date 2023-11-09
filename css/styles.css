@@ -4,11 +4,19 @@
 
 body{
     font : normal normal normal 12px/1.5 Verdana, arial, Helvetica, sans-serif;
-    height : 100vh;
-    width : 100vw;
+    height : auto;
+    width : auto;
     background-color : hsla(0, 0%, 0%, 0.4)
 }
-
+h1 {
+    color: blue;
+    font-size: 30px;
+}
+ul li a {
+    list-style-type: square;
+    line-height: 1.5rem;
+    color : rgba(100, 50, 100, 100%)
+}
 h2{
     font-size : 2rem; 
     color : #fc9   
@@ -16,25 +24,56 @@ h2{
 header{
     background-color: hsla(0, 100%, 50%, 0.4);
 }
+nav ul li{
+    display: inline;
+    list-style-type: none;
+}
+nav ul li a{
+    border: 2px solid indigo;
+    color: indigo;
+    background-color: cornsilk;
+    text-decoration: none;
+    padding: 4px;
+}
+nav ul li a:hover{
+    border: 2px solid cornsilk;
+    color: cornsilk;
+    background-color: indigo;
+}
 main{
     float : left;
     width : 65vw;
     background-color: hsla(172, 100%, 50%, 0.4);
-    height : 60vh;
+    height : auto;
+}
+aside ul{
+    list-style-type: square;
+}
+aside li, a{
+    line-height: 1.5rem;
+    color : rgba(100, 50, 100, 100%)
+}
+aside a{
+    color : rgba(100, 200, 100, 100%)
+}
+aside a:hover{
+    color : #f09
 }
 aside{
     float : right;
     width : 25vw;
     background-color: hsl(66, 100%, 50%);
-    height : 60vh;
+    height : auto;
 }
+
 footer{
     clear : both;
     background-color: hsla(271, 65%, 60%, 0.979);
 }
 .structural{
-        margin : 10px;  
-        padding : 10px;
+        margin : 5px;  
+        padding : 5px;
+        border: 2px solid black;
         
 }
 #p1{
@@ -43,8 +82,30 @@ footer{
 #p2{
     color : rgb(0, 230, 0)
 }
-a:hover{
-    color : #f09
+form{
+    border: 5px dashed pink;
+
+}
+input[type=text], input[type=email], input[type=submit], select, option{
+    display: block;
+    width: 50%;
+    height: 2em;
+}
+input[type=radio], input[type=checkbox]{
+    height: 2em;
+    width: 2em;
+}
+select, option, label, legend{
+    font-variant: small-caps;
+    font-weight: small;
+    font-size: 1.5rem;
+}
+textarea{
+    width: 50%;
+    display: block;
+}
+fieldset{
+    border: none;
 }
 footer p{
     font-size : .75em;
