@@ -1,16 +1,19 @@
 /* Cole Breen
 * ID: 8939986
 */
-
+html{
+    font : normal normal normal 20px/1.5 Verdana, arial, Helvetica, sans-serif;
+}
 body{
-    font : normal normal normal 12px/1.5 Verdana, arial, Helvetica, sans-serif;
     height : auto;
     width : auto;
-    background-color : hsla(0, 0%, 0%, 0.4)
+    background-color : hsla(0, 0%, 0%, 0.4);
+    display: flex;
+    flex-direction: column;
 }
 h1 {
     color: blue;
-    font-size: 30px;
+    font-size: 2.5rem;
 }
 ul li a {
     list-style-type: square;
@@ -23,6 +26,10 @@ h2{
 }
 header{
     background-color: hsla(0, 100%, 50%, 0.4);
+    flex: 1 10%;
+}
+nav{
+    flex: 1 5%;
 }
 nav ul li{
     display: inline;
@@ -33,24 +40,42 @@ nav ul li a{
     color: indigo;
     background-color: cornsilk;
     text-decoration: none;
-    padding: 4px;
+    padding: 1em;
 }
 nav ul li a:hover{
     border: 2px solid cornsilk;
     color: cornsilk;
     background-color: indigo;
 }
+section{
+    display: flex;
+    flex-direction: row;
+    flex: 4 8%;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
 main{
-    float : left;
-    width : 65vw;
+    flex: 2 1 70%;
     background-color: hsla(172, 100%, 50%, 0.4);
-    height : auto;
+}
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+figure{
+    border: 2px solid black;
+}
+img{
+    width: 80%;
+    height: 80%;
 }
 aside ul{
     list-style-type: square;
 }
 aside li, a{
-    line-height: 1.5rem;
+    line-height: 2rem;
     color : rgba(100, 50, 100, 100%)
 }
 aside a{
@@ -60,19 +85,16 @@ aside a:hover{
     color : #f09
 }
 aside{
-    float : right;
-    width : 25vw;
+    flex: 1 2 30%;
     background-color: hsl(66, 100%, 50%);
-    height : auto;
 }
-
 footer{
-    clear : both;
+    flex: 1 5%;
     background-color: hsla(271, 65%, 60%, 0.979);
 }
 .structural{
-        margin : 5px;  
-        padding : 5px;
+        margin : 1rem;  
+        padding : 1rem;
         border: 2px solid black;
         
 }
@@ -109,4 +131,18 @@ fieldset{
 }
 footer p{
     font-size : .75em;
+}
+@media (max-width: 1200px){
+    html{
+        font-size: 15px;
+    }
+}
+@media (max-width: 600px){
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    html{
+        font-size: 10px;
+    }
 }
